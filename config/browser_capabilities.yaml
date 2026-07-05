@@ -1,0 +1,53 @@
+# =============================================================================
+# browser_capabilities.yaml
+# Driver / browser specific launch arguments and desired capabilities,
+# consumed by selenium_factory.py and playwright_factory.py.
+# =============================================================================
+
+selenium:
+  chrome:
+    arguments:
+      - "--start-maximized"
+      - "--disable-notifications"
+      - "--disable-popup-blocking"
+      - "--disable-infobars"
+      - "--disable-dev-shm-usage"
+      - "--no-sandbox"
+    experimental_options:
+      excludeSwitches:
+        - "enable-automation"
+      useAutomationExtension: false
+  firefox:
+    arguments:
+      - "--width=1920"
+      - "--height=1080"
+    preferences:
+      dom.webnotifications.enabled: false
+  edge:
+    arguments:
+      - "--start-maximized"
+      - "--disable-notifications"
+
+playwright:
+  chromium:
+    args:
+      - "--start-maximized"
+      - "--disable-notifications"
+    viewport:
+      width: 1920
+      height: 1080
+  firefox:
+    viewport:
+      width: 1920
+      height: 1080
+  webkit:
+    viewport:
+      width: 1920
+      height: 1080
+
+common:
+  default_download_dir: "testdata/downloads"
+  accept_insecure_certs: true
+  window_size:
+    width: 1920
+    height: 1080

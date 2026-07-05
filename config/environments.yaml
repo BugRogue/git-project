@@ -1,0 +1,38 @@
+# =============================================================================
+# environments.yaml
+# Environment-specific base URLs and credentials for SauceDemo.
+# The framework picks the block matching config.yaml -> active_environment.
+# =============================================================================
+
+qa:
+  base_url: "https://www.saucedemo.com/"
+  api_base_url: "https://www.saucedemo.com/"
+  users:
+    standard_user:
+      username: "standard_user"
+      password: "secret_sauce"
+    locked_out_user:
+      username: "locked_out_user"
+      password: "secret_sauce"
+    problem_user:
+      username: "problem_user"
+      password: "secret_sauce"
+    performance_glitch_user:
+      username: "performance_glitch_user"
+      password: "secret_sauce"
+
+staging:
+  base_url: "https://www.saucedemo.com/"
+  api_base_url: "https://www.saucedemo.com/"
+  users:
+    standard_user:
+      username: "standard_user"
+      password: "secret_sauce"
+
+prod:
+  base_url: "https://www.saucedemo.com/"
+  api_base_url: "https://www.saucedemo.com/"
+  users:
+    standard_user:
+      username: "standard_user"
+      password: "secret_sauce"

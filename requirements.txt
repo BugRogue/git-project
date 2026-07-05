@@ -1,0 +1,28 @@
+# =============================================================================
+# requirements.txt
+# Core dependencies for the Hybrid Automation Framework
+# =============================================================================
+
+# --- Test runner & reporting ---
+pytest==8.3.3
+pytest-html==4.1.1
+pytest-xdist==3.6.1
+pytest-rerunfailures==14.0
+pytest-bdd==7.3.0
+
+# --- Selenium stack ---
+selenium==4.25.0
+
+# --- Playwright stack ---
+playwright==1.48.0
+pytest-playwright==0.5.2
+
+# --- API testing ---
+requests==2.32.3
+
+# --- Data / config handling ---
+PyYAML==6.0.2
+
+# --- Utilities ---
+python-dotenv==1.0.1
+faker==30.8.2
