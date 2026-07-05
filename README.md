@@ -1,3 +1,5 @@
+This is my first Git project 
+
 # Hybrid Automation Framework — SauceDemo
 
 A production-grade, hybrid **Selenium + Playwright** test automation framework built in Python, designed to automate [SauceDemo](https://www.saucedemo.com/) using a single, engine-agnostic Page Object layer. The framework lets you switch the entire execution engine — Selenium or Playwright — by changing **one config flag**, without touching a single test or page object.
