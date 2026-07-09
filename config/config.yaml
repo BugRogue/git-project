@@ -26,51 +26,31 @@ browser: "chrome"          # chrome | firefox | edge | webkit (playwright only)
 headless: true
 maximize_window: true
 incognito: true
-
-# ------------------------------------------------------------------------
-# TIMEOUTS (seconds)
-# ------------------------------------------------------------------------
 timeouts:
   implicit_wait: 5
   explicit_wait: 15
   page_load_timeout: 30
   script_timeout: 30
   poll_frequency: 0.5
-
-# ------------------------------------------------------------------------
-# RETRY STRATEGY
-# ------------------------------------------------------------------------
 retry:
   max_attempts: 3
   backoff_seconds: 2
   retry_on_exceptions:
-    - "TimeoutException"
-    - "StaleElementReferenceException"
-    - "ElementClickInterceptedException"
-    - "TimeoutError"
-
-# ------------------------------------------------------------------------
-# REPORTING & ARTIFACTS
-# ------------------------------------------------------------------------
+  - TimeoutException
+  - StaleElementReferenceException
+  - ElementClickInterceptedException
+  - TimeoutError
 reporting:
   screenshot_on_failure: true
-  screenshot_dir: "screenshots"
-  report_dir: "reports"
-  log_dir: "logs"
-  log_level: "INFO"          # DEBUG | INFO | WARNING | ERROR
-  video_on_failure: false    # Playwright-only feature
-  trace_on_failure: true     # Playwright-only feature
-
-# ------------------------------------------------------------------------
-# PARALLEL EXECUTION
-# ------------------------------------------------------------------------
+  screenshot_dir: screenshots
+  report_dir: reports
+  log_dir: logs
+  log_level: INFO
+  video_on_failure: false
+  trace_on_failure: true
 parallel:
   enabled: true
   workers: 4
-
-# ------------------------------------------------------------------------
-# REMOTE / GRID EXECUTION (Selenium Grid or Playwright remote server)
-# ------------------------------------------------------------------------
 remote:
   enabled: false
-  hub_url: "http://localhost:4444/wd/hub"
+  hub_url: http://localhost:4444/wd/hub

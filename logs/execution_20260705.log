@@ -47,3 +47,84 @@
 2026-07-05 18:12:12 | INFO     | MainThread      | core.base.selenium_base_test | Tearing down Selenium test: test_locked_out_user_sees_error
 2026-07-05 18:12:15 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'selenium'.
 2026-07-05 18:12:55 | INFO     | MainThread      | tests.api.health_check_test | GET https://www.saucedemo.com/ -> 200
+2026-07-05 23:45:03 | INFO     | MainThread      | tests.api.health_check_test | GET https://www.saucedemo.com/ -> 200
+2026-07-05 23:45:43 | INFO     | MainThread      | core.base.selenium_base_test | Setting up Selenium test: test_valid_login_redirects_to_inventory
+2026-07-05 23:45:43 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:45:43 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=False
+2026-07-05 23:45:45 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:45:45 | INFO     | MainThread      | core.wrappers.selenium_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:45:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'standard_user' into element: ('id', 'user-name')
+2026-07-05 23:45:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'secret_sauce' into element: ('id', 'password')
+2026-07-05 23:45:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Clicking element: ('id', 'login-button')
+2026-07-05 23:45:46 | INFO     | MainThread      | core.utilities.assertions | ASSERT_URL_CONTAINS | url='https://www.saucedemo.com/inventory.html' fragment='inventory.html'
+2026-07-05 23:45:46 | INFO     | MainThread      | core.utilities.assertions | ASSERT_EQUAL | actual='Products' expected='Products' | Inventory page title mismatch after login
+2026-07-05 23:45:46 | INFO     | MainThread      | core.utilities.assertions | ASSERT_TRUE | condition=True | Expected inventory items to be visible after login
+2026-07-05 23:45:46 | INFO     | MainThread      | core.base.selenium_base_test | Tearing down Selenium test: test_valid_login_redirects_to_inventory
+2026-07-05 23:45:48 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'selenium'.
+2026-07-05 23:45:48 | INFO     | MainThread      | core.base.selenium_base_test | Setting up Selenium test: test_locked_out_user_sees_error
+2026-07-05 23:45:48 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:45:48 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=False
+2026-07-05 23:45:50 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:45:50 | INFO     | MainThread      | core.wrappers.selenium_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:45:50 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'locked_out_user' into element: ('id', 'user-name')
+2026-07-05 23:45:50 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'secret_sauce' into element: ('id', 'password')
+2026-07-05 23:45:50 | INFO     | MainThread      | core.wrappers.selenium_actions | Clicking element: ('id', 'login-button')
+2026-07-05 23:45:50 | INFO     | MainThread      | core.utilities.assertions | ASSERT_CONTAINS | container='Epic sadface: Sorry, this user has been locked out.' member='locked out' | Expected locked-out error message to be displayed
+2026-07-05 23:45:50 | INFO     | MainThread      | core.base.selenium_base_test | Tearing down Selenium test: test_locked_out_user_sees_error
+2026-07-05 23:45:53 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'selenium'.
+2026-07-05 23:46:03 | INFO     | MainThread      | core.base.playwright_base_test | Setting up Playwright test: test_valid_login_redirects_to_inventory
+2026-07-05 23:46:03 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:46:03 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=False
+2026-07-05 23:46:05 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:46:05 | INFO     | MainThread      | core.base.playwright_base_test | Setting up Playwright test: test_locked_out_user_sees_error
+2026-07-05 23:46:05 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:46:05 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=False
+2026-07-05 23:46:06 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:47:39 | INFO     | MainThread      | core.base.selenium_base_test | Setting up Selenium test: test_valid_login_redirects_to_inventory
+2026-07-05 23:47:39 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:47:39 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=True
+2026-07-05 23:47:41 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:47:41 | INFO     | MainThread      | core.wrappers.selenium_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:47:41 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'standard_user' into element: ('id', 'user-name')
+2026-07-05 23:47:41 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'secret_sauce' into element: ('id', 'password')
+2026-07-05 23:47:41 | INFO     | MainThread      | core.wrappers.selenium_actions | Clicking element: ('id', 'login-button')
+2026-07-05 23:47:41 | INFO     | MainThread      | core.utilities.assertions | ASSERT_URL_CONTAINS | url='https://www.saucedemo.com/inventory.html' fragment='inventory.html'
+2026-07-05 23:47:41 | INFO     | MainThread      | core.utilities.assertions | ASSERT_EQUAL | actual='Products' expected='Products' | Inventory page title mismatch after login
+2026-07-05 23:47:42 | INFO     | MainThread      | core.utilities.assertions | ASSERT_TRUE | condition=True | Expected inventory items to be visible after login
+2026-07-05 23:47:42 | INFO     | MainThread      | core.base.selenium_base_test | Tearing down Selenium test: test_valid_login_redirects_to_inventory
+2026-07-05 23:47:44 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'selenium'.
+2026-07-05 23:47:44 | INFO     | MainThread      | core.base.selenium_base_test | Setting up Selenium test: test_locked_out_user_sees_error
+2026-07-05 23:47:44 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: selenium
+2026-07-05 23:47:44 | INFO     | MainThread      | core.driver_factory.selenium_factory | Creating Selenium driver | browser=chrome headless=True
+2026-07-05 23:47:45 | INFO     | MainThread      | core.driver_factory.selenium_factory | Selenium driver created successfully.
+2026-07-05 23:47:45 | INFO     | MainThread      | core.wrappers.selenium_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:47:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'locked_out_user' into element: ('id', 'user-name')
+2026-07-05 23:47:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Typing 'secret_sauce' into element: ('id', 'password')
+2026-07-05 23:47:46 | INFO     | MainThread      | core.wrappers.selenium_actions | Clicking element: ('id', 'login-button')
+2026-07-05 23:47:46 | INFO     | MainThread      | core.utilities.assertions | ASSERT_CONTAINS | container='Epic sadface: Sorry, this user has been locked out.' member='locked out' | Expected locked-out error message to be displayed
+2026-07-05 23:47:46 | INFO     | MainThread      | core.base.selenium_base_test | Tearing down Selenium test: test_locked_out_user_sees_error
+2026-07-05 23:47:48 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'selenium'.
+2026-07-05 23:47:49 | INFO     | MainThread      | core.base.playwright_base_test | Setting up Playwright test: test_valid_login_redirects_to_inventory
+2026-07-05 23:47:49 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: playwright
+2026-07-05 23:47:49 | INFO     | MainThread      | core.driver_factory.playwright_factory | Creating Playwright session | engine=chromium headless=True
+2026-07-05 23:48:04 | INFO     | MainThread      | core.driver_factory.playwright_factory | Playwright session created successfully.
+2026-07-05 23:48:04 | INFO     | MainThread      | core.wrappers.playwright_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:48:05 | INFO     | MainThread      | core.wrappers.playwright_actions | Typing 'standard_user' into selector: #user-name
+2026-07-05 23:48:05 | INFO     | MainThread      | core.wrappers.playwright_actions | Typing 'secret_sauce' into selector: #password
+2026-07-05 23:48:05 | INFO     | MainThread      | core.wrappers.playwright_actions | Clicking selector: #login-button
+2026-07-05 23:48:05 | INFO     | MainThread      | core.utilities.assertions | ASSERT_URL_CONTAINS | url='https://www.saucedemo.com/inventory.html' fragment='inventory.html'
+2026-07-05 23:48:05 | INFO     | MainThread      | core.utilities.assertions | ASSERT_EQUAL | actual='Products' expected='Products' | Inventory page title mismatch after login
+2026-07-05 23:48:05 | INFO     | MainThread      | core.utilities.assertions | ASSERT_TRUE | condition=True | Expected inventory items to be visible after login
+2026-07-05 23:48:05 | INFO     | MainThread      | core.base.playwright_base_test | Tearing down Playwright test: test_valid_login_redirects_to_inventory
+2026-07-05 23:48:05 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'playwright'.
+2026-07-05 23:48:05 | INFO     | MainThread      | core.base.playwright_base_test | Setting up Playwright test: test_locked_out_user_sees_error
+2026-07-05 23:48:05 | INFO     | MainThread      | core.driver_factory.driver_manager | DriverManager resolving engine: playwright
+2026-07-05 23:48:05 | INFO     | MainThread      | core.driver_factory.playwright_factory | Creating Playwright session | engine=chromium headless=True
+2026-07-05 23:48:06 | INFO     | MainThread      | core.driver_factory.playwright_factory | Playwright session created successfully.
+2026-07-05 23:48:06 | INFO     | MainThread      | core.wrappers.playwright_actions | Navigating to URL: https://www.saucedemo.com/
+2026-07-05 23:48:06 | INFO     | MainThread      | core.wrappers.playwright_actions | Typing 'locked_out_user' into selector: #user-name
+2026-07-05 23:48:06 | INFO     | MainThread      | core.wrappers.playwright_actions | Typing 'secret_sauce' into selector: #password
+2026-07-05 23:48:06 | INFO     | MainThread      | core.wrappers.playwright_actions | Clicking selector: #login-button
+2026-07-05 23:48:06 | INFO     | MainThread      | core.utilities.assertions | ASSERT_CONTAINS | container='Epic sadface: Sorry, this user has been locked out.' member='locked out' | Expected locked-out error message to be displayed
+2026-07-05 23:48:06 | INFO     | MainThread      | core.base.playwright_base_test | Tearing down Playwright test: test_locked_out_user_sees_error
+2026-07-05 23:48:06 | INFO     | MainThread      | core.driver_factory.driver_manager | Driver/session torn down successfully for engine 'playwright'.
