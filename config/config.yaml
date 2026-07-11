@@ -23,7 +23,7 @@ active_environment: "qa"
 # BROWSER SETTINGS
 # ------------------------------------------------------------------------
 browser: "chrome"          # chrome | firefox | edge | webkit (playwright only)
-headless: false
+headless: true
 maximize_window: true
 incognito: true
 
