@@ -50,24 +50,23 @@ class DriverManager:
     browser session.
     """
 
-
+    
     @staticmethod
     def get_execution_engine() -> EngineName:
         """Read the active engine flag: env var override takes precedence
         over config.yaml, so CI can force a specific engine per test step
         without needing a separate committed config per suite."""
-    engine = os.environ.get("EXECUTION_ENGINE")
-    if not engine:
-        engine = DataReader.read_yaml("config/config.yaml").get(
-            "execution_engine", "selenium"
-        )
-    engine = engine.lower()
-    if engine not in ("selenium", "playwright"):
-        raise ValueError(
-            f"Invalid execution_engine '{engine}'. Must be 'selenium' or 'playwright'."
-        )
-    return engine  # type: ignore[return-value]
-
+        engine = os.environ.get("EXECUTION_ENGINE")
+        if not engine:
+            engine = DataReader.read_yaml("config/config.yaml").get(
+                "execution_engine", "selenium"
+            )
+        engine = engine.lower()
+        if engine not in ("selenium", "playwright"):
+            raise ValueError(
+                f"Invalid execution_engine '{engine}'. Must be 'selenium' or 'playwright'."
+            )
+        return engine  # type: ignore[return-value]
     @classmethod
     def get_driver(cls) -> Union[Any, PlaywrightSession]:
         """
