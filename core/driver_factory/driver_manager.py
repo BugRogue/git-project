@@ -51,11 +51,11 @@ class DriverManager:
     """
 
 
-   @staticmethod
-   def get_execution_engine() -> EngineName:
-    """Read the active engine flag: env var override takes precedence
-    over config.yaml, so CI can force a specific engine per test step
-    without needing a separate committed config per suite."""
+    @staticmethod
+    def get_execution_engine() -> EngineName:
+        """Read the active engine flag: env var override takes precedence
+        over config.yaml, so CI can force a specific engine per test step
+        without needing a separate committed config per suite."""
     engine = os.environ.get("EXECUTION_ENGINE")
     if not engine:
         engine = DataReader.read_yaml("config/config.yaml").get(
