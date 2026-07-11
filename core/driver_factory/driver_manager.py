@@ -50,23 +50,7 @@ class DriverManager:
     browser session.
     """
 
-    @staticmethod
-    def get_execution_engine() -> EngineName:
-        """Read the active engine flag from config.yaml."""
-        engine = DataReader.read_yaml("config/config.yaml").get(
-            "execution_engine", "selenium"
-        ).lower()
-        if engine not in ("selenium", "playwright"):
-            raise ValueError(
-                f"Invalid execution_engine '{engine}' in config.yaml. "
-                "Must be 'selenium' or 'playwright'."
-            )
-        return engine  # type: ignore[return-value]
 
-   # core/driver_factory/driver_manager.py
-
-  
-   
    @staticmethod
    def get_execution_engine() -> EngineName:
     """Read the active engine flag: env var override takes precedence
