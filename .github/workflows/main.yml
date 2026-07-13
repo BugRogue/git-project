@@ -1,4 +1,4 @@
-name: Python Package using Pip
+name: Python Test Automation CI
 on: [push, pull_request]
 
 jobs:
